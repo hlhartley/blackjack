@@ -7,9 +7,8 @@ const Cards = (props) => {
     <div className="Cards">
       <header className="Cards-header">
         <p>
-          {props.value}
+          {props.points}
         </p>
-        <button onClick={() => props.handleChange(props.value + 1)}>Increment Value</button>
       </header>
     </div>
   );
