@@ -4,6 +4,7 @@ import Cards from '../../Components/Cards/Cards';
 import { deckOfCards } from '../../Helpers/Data';
 
 function App() {
+  const [winner, setWinner] = useState('TBD');
   const [playerPoints, setPlayerPoints] = useState(0);
   const [dealerPoints, setDealerPoints] = useState(0);
   const [playerCards, setPlayerCards] = useState([]);
@@ -28,6 +29,18 @@ function App() {
     return randomCards;
   }
 
+  const newGame = () => {
+    setWinner('TBD');
+    setPlayerPoints(0);
+    setDealerPoints(0);
+    setPlayerCards([]);
+    setDealerCards([]);
+    cards.forEach((card) => {
+      card.isSelected = false
+    });
+    dealCards();
+  }
+
   const dealCards = () => {
     const [card1, card2, card3] = getRandomCards(3);
     setPlayerCards(p => [...p, card1, card2]);
@@ -41,6 +54,9 @@ function App() {
     if (turn === 'Player') {
       setPlayerCards(p => [...p, randomCard]);
       setPlayerPoints(playerPoints + randomCard.value);
+      if (playerPoints + randomCard.value > 21) {
+        setWinner('Dealer');
+      }
     } else {
       setDealerCards(p => [...p, randomCard]);
       setDealerPoints(dealerPoints + randomCard.value);
@@ -51,22 +67,30 @@ function App() {
     setTurn('Dealer');
 
     let points = dealerPoints;
-    for (let i=0; points < 17; i++) {
+    while (points < 17) {
       const [randomCard] = getRandomCards(1);
       setDealerCards(p => [...p, randomCard]);
       points += randomCard.value;
-
       if (points > 16) {
         setDealerPoints(points);
+        determineWinner(points);
         return;
       }
+    }
+  }
 
+  const determineWinner = (dealerPoints) => {
+    playerPoints > dealerPoints || dealerPoints > 21 ? setWinner('Player') : setWinner('Dealer');
+    if (playerPoints === dealerPoints) {
+      setWinner('Tie')
     }
   }
 
   return (
     <div className="App">
       <header className="App-header">
+        <button onClick={() => newGame()}>New Game</button>
+        <div>Winner: {winner}</div>
         <div>Turn: {turn}</div>
       </header>
       <section className="App-body">

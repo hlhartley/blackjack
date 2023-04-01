@@ -8,14 +8,14 @@
 
 .App-header {
   color: white;
-  height: 3vh;
+  height: 7vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .App-body {
-  height: 97vh;
+  height: 93vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
