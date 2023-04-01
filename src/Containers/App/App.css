@@ -3,19 +3,21 @@
   background-image: url(../../../public/blackjack-table-5.jpeg);
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #181916;
+  background-color: #181816;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
 }
 
 .App-header {
   color: white;
-  height: 7vh;
+  height: 15vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
 .App-body {
-  height: 93vh;
+  height: 85vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -23,4 +25,15 @@
   justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: black;
+}
+
+button {
+  letter-spacing: 1.5px;
+  border-radius: 5px;
+  background-color: #005d72;
+  color: white;
+  height: 35px;
+  width: 115px;
+  margin: 0 10px;
+  border: 1px solid #0e3d48;
 }

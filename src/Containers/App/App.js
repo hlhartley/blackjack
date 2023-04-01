@@ -30,6 +30,7 @@ function App() {
   }
 
   const newGame = () => {
+    setTurn('Player');
     setWinner('TBD');
     setPlayerPoints(0);
     setDealerPoints(0);
@@ -47,6 +48,9 @@ function App() {
     setDealerCards(p => [...p, card3]);
     setPlayerPoints(card1.value + card2.value);
     setDealerPoints(card3.value);
+    if (card1.value + card2.value === 21) {
+      setWinner('Player');
+    }
   }
 
   const hit = () => {
@@ -89,22 +93,22 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <button onClick={() => newGame()}>New Game</button>
-        <div>Winner: {winner}</div>
         <div>Turn: {turn}</div>
+        <div>Winner: {winner}</div>
+        <button onClick={() => newGame()}>New Game</button>
       </header>
       <section className="App-body">
         <div>
+          Dealer: {dealerPoints}
           <Cards
             cards={dealerCards}
           />
-          Dealer: {dealerPoints}
         </div>
         <div>
+          Player : {playerPoints}
           <Cards
             cards={playerCards}
           />
-          Player : {playerPoints}
         </div>
         <div>
           <button onClick={() => hit()}>Hit</button>

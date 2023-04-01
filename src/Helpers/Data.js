@@ -1,7 +1,7 @@
 export const deckOfCards = [
   {
     id: 1,
-    value: 1,
+    value: 11,
     suit: 'hearts',
     name: 'ace_of_hearts',
     isSelected: false,
@@ -92,7 +92,7 @@ export const deckOfCards = [
   },
   {
     id: 14,
-    value: 1,
+    value: 11,
     suit: 'diamonds',
     name: 'ace_of_diamonds',
     isSelected: false,
@@ -183,7 +183,7 @@ export const deckOfCards = [
   },
   {
     id: 27,
-    value: 1,
+    value: 11,
     suit: 'clubs',
     name: 'ace_of_clubs',
     isSelected: false,
@@ -274,7 +274,7 @@ export const deckOfCards = [
   },
   {
     id: 40,
-    value: 1,
+    value: 11,
     suit: 'spades',
     name: 'ace_of_spades',
     isSelected: false,
