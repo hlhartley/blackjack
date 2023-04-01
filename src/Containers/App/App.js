@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import Cards from '../Cards/Cards';
+import Cards from '../../Components/Cards/Cards';
 import { deckOfCards } from '../../Helpers/Data';
 
 function App() {
@@ -45,23 +45,14 @@ function App() {
         <div>Turn: {turn}</div>
         <div>
           Dealer: {dealerPoints}
-          <p></p>
-          {dealerCards.map((card) => {
-            return card.value
-          })}
           <Cards
-
-/>
+            cards={dealerCards}
+          />
         </div>
         <div>
           Player : {playerPoints}
-          <p></p>
-          {playerCards.map((card) => {
-            return card.value
-          })}
           <Cards
-
-            hit={hit}
+            cards={playerCards}
           />
         </div>
         <button onClick={() => hit(playerPoints + 1)}>Increment Value</button>
