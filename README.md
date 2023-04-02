@@ -5,8 +5,8 @@ I created a simple blackjack game in React, with React Hooks.
 http://blackjack-game-react.s3-website-us-west-2.amazonaws.com/
 
 ## Screenshots
-![Desktop Screenshot](https://github.com/hlhartley/blackjack/blob/main/blackjack-desktop.png)
-![Mobile Screenshot](https://github.com/hlhartley/blackjack/blob/main/blackjack-mobile.png)
+![Desktop Screenshot](https://github.com/hlhartley/blackjack/blob/main/blackjack_desktop.png)
+![Mobile Screenshot](https://github.com/hlhartley/blackjack/blob/main/blackjack_mobile.png)
 
 ## Technologies Used
 - React
