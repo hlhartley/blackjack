@@ -3,7 +3,7 @@ import './Card.css';
 const Card = (props) => {
   return (
     <div className="Card">
-      <img src={require(`../../../Assets/PlayingCards/${props.card.name}.png`)} height="125"></img>
+      <img src={props.card.image} height="125"></img>
     </div>
   )
 }
