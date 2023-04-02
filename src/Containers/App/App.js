@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import Header from '../../Components/Header/Header';
 import Cards from '../../Components/Cards/Cards';
 import { deckOfCards } from '../../Helpers/Data';
 
@@ -11,6 +12,7 @@ function App() {
   const [dealerCards, setDealerCards] = useState([]);
   const [turn, setTurn] = useState('Player');
   const [cards, setCards] = useState(deckOfCards);
+  const [player, setPlayer] = useState({ name: 'Player' });
 
   useEffect(() => {
     if (playerCards.length === 0) {
@@ -90,22 +92,26 @@ function App() {
     }
   }
 
+  const setPlayerInfo = (playerInfo) => {
+    setPlayer(playerInfo);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <div>Turn: {turn}</div>
-        <div>Winner: {winner}</div>
-        <button onClick={() => newGame()}>New Game</button>
-      </header>
+      <Header
+        turn={turn}
+        winner={winner}
+        newGame={newGame}
+        setPlayerInfo={setPlayerInfo}
+      />
       <section className="App-body">
         <div>
-          Dealer: {dealerPoints}
           <Cards
             cards={dealerCards}
           />
         </div>
         <div>
-          Player : {playerPoints}
+          <div>{player.name}</div>
           <Cards
             cards={playerCards}
           />

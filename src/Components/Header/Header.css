@@ -1,0 +1,7 @@
+.App-header {
+  height: 12vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
