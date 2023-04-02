@@ -11,6 +11,7 @@ http://blackjack-game-react.s3-website-us-west-2.amazonaws.com/
 ## Technologies Used
 - React
 - React Hooks
+- AWS (for hosting)
 
 ## API
 - Implemented Deck of Cards API as a 2nd version: https://deckofcardsapi.com/ (refer to commit history)
