@@ -1,5 +1,5 @@
 ## Description
-I wanted to recreate a simple blackjack game, while reviewing React and React Hooks.
+I created a simple blackjack game in React, with React Hooks.
 
 ## Play Game
 http://blackjack-game-react.s3-website-us-west-2.amazonaws.com/
