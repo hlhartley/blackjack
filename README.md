@@ -5,7 +5,7 @@ I wanted to recreate a simple blackjack game, while reviewing React and React Ho
 
 
 ## Screenshots
-![Create Game Screenshot](CreateGameSS.png)
+![Create Game Screenshot](https://github.com/hlhartley/blackjack/blob/main/blackjack-game-screenshot.png)
 
 ## Technologies Used
 - React
