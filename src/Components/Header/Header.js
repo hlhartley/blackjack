@@ -7,8 +7,10 @@ const Header = (props) => {
       <Form
         setPlayerInfo={props.setPlayerInfo}
       />
-      <div>Turn: {props.turn}</div>
-      <div>Winner: {props.winner}</div>
+      <div>
+        <div>Turn: {props.turn}</div>
+        <div>Winner: {props.winner}</div>
+      </div>
       <button onClick={() => props.newGame()}>New Game</button>
     </div>
   )
