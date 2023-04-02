@@ -12,4 +12,7 @@ I wanted to recreate a simple blackjack game, while reviewing React and React Ho
 - React Hooks
 
 ## Future Iterations
-- Refer to Issues
+- Make Aces worth 1 OR 11 based on best-scenario/player's choice
+- Allow splitting of pairs
+- Add chips/betting
+- Implement "Basic Strategy" logic/guide
